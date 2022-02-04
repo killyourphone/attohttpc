@@ -22,13 +22,13 @@ log = "0.4"
 mime = {version = "0.3", optional = true}
 multipart = {version = "0.18", optional = true}
 native-tls = {version = "0.2", optional = true}
-rustls-opt-dep = {package = "rustls", version = "0.20", features = ["dangerous_configuration"], optional = true}
+rustls-opt-dep = { git = "https://github.com/killyourphone/rustls.git", branch = "esp32", package = "rustls", features = ["dangerous_configuration"], optional = true}
 serde = {version = "1", optional = true}
 serde_json = {version = "1", optional = true}
 serde_urlencoded = {version = "0.7", optional = true}
 url = "2"
-webpki = {version = "0.22", optional = true}
-webpki-roots = {version = "0.22", optional = true}
+webpki = { git = "https://github.com/killyourphone/webpki.git", branch = "esp32", optional = true}
+webpki-roots = { git = "https://github.com/killyourphone/webpki-roots.git", branch = "esp32", optional = true}
 wildmatch = "2"
 
 [target.'cfg(not(any(target_os = "windows", target_os = "macos", target_os = "ios")))'.dependencies]
